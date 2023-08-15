@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: linear-gradient(to top, #A8E6CF, #D1F2EB);" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="com.example.weatherapp.HelloController">
+
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+
+  <!-- Added Title -->
+  <Label lineSpacing="5.0" prefHeight="13.0" prefWidth="270.0" style="-fx-font-size: 24px; -fx-text-fill: black; -fx-background-color: #A2D9CE; -fx-padding: 20px; -fx-border-radius: 20px;" text="      Weather App" textFill="#037166" textOverrun="LEADING_ELLIPSIS">
+      <font>
+         <Font name="System Bold Italic" size="11.0" />
+      </font>
+      <effect>
+         <Blend />
+      </effect></Label>
+
+  <TextField fx:id="cityInput" maxWidth="300" promptText="Enter city name" style="-fx-font-size: 14px; -fx-background-color: #E0F7FA; -fx-border-color: #A2D9CE; -fx-border-radius: 5px; -fx-padding: 10px;" />
+
+  <Button fx:id="fetchButton" style="-fx-font-size: 16px; -fx-background-color: #A2D9CE; -fx-text-fill: #05668D; -fx-border-radius: 5px; -fx-padding: 10px 20px;" text="Fetch Weather">
+      <effect>
+         <DropShadow />
+      </effect></Button>
+
+  <Label fx:id="temperatureOutput" maxWidth="300" style="-fx-font-size: 16px; -fx-text-fill: #05668D; -fx-background-color: #E0F7FA; -fx-padding: 10px; -fx-border-radius: 5px;" text="Temperature will appear here" wrapText="true" />
+
+  <Label fx:id="humidityOutput" maxWidth="300" style="-fx-font-size: 16px; -fx-text-fill: #05668D; -fx-background-color: #E0F7FA; -fx-padding: 10px; -fx-border-radius: 5px;" text="Humidity will appear here" wrapText="true" />
+
+  <Label fx:id="weatherOutput" maxWidth="300" style="-fx-font-size: 16px; -fx-text-fill: #05668D; -fx-background-color: #A2D9CE; -fx-padding: 10px; -fx-border-radius: 5px;" text="Weather description will appear here" wrapText="true" />
+
+</VBox>
